@@ -110,8 +110,10 @@ html #content {
 #content .mb_destacadas {
     position: relative;
 }
-
-#content .mb_destacadas:after {
+#content .mb_destacadas a {
+    text-decoration: none;
+}
+#content .mb_destacadas:after, #content .mb_textos:after {
     content: "";
     display: block;
     position: absolute;
@@ -133,7 +135,9 @@ html #content {
 #content .mb_destacadas h3 {
     color: #74c7dd;
 }
-
+#content .mb_destacadas p {
+    color: #fff;
+}
 #content .cargo {
     font-family: 'Noto Serif', serif;
     font-style: italic;
@@ -153,12 +157,321 @@ html #content {
     height: 90px;
     width: 90px;
 }
+
 #content .mb_destacadas > div:first-child .img-perfil:before {
     left: -10px;
     top: -10px;
 }
+
 #content .mb_destacadas > div:last-child .img-perfil:before {
     right: -10px;
     bottom: -10px;
     transform: rotate(180deg);
+}
+
+/*Textos*/
+#content .mb_textos:after {
+    height: 120%;
+    top: 0;
+}
+
+#content .mb_textos:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 56px;
+    height: 48px;
+    background: url('../img/graf-triangulo-w.png') no-repeat center;
+    background-size: contain;
+    top: 50%;
+    left: 50%;
+    margin-left: -27px;
+    z-index: 2;
+    margin-top: -24px;
+}
+
+#content .mb_textos {
+    position: relative;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+#content .mb_textos > div {
+    padding: 0;
+}
+
+#content .mb_textos h3 {
+    color: #74c7dd;
+    padding: 0 3.6rem;
+}
+
+#content .mb_textos p {
+    padding: 0 3.6rem;
+    font-family: 'Noto Serif', serif;
+    font-style: italic;
+    font-size: 1.5rem;
+}
+
+/*Personas*/
+#content .mb_personas {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+#content .mb_personas> div:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 2px;
+    height: 115%;
+    top: -9%;
+    background: #74c7dd;
+    z-index: 5;
+    left: 0;
+}
+
+#content .mb_personas> div:first-child:before, #content .mb_personas> div:last-child .persona:last-child:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 93px;
+    height: 90px;
+    background: url('../img/graf-triangulo-a.png');
+}
+
+#content .mb_personas > div:first-child:before {
+    top: -15px;
+    left: -15px;
+}
+
+#content .mb_personas > div:last-child .persona {
+    position: relative;
+}
+
+#content .mb_personas> div:last-child .persona:last-child:after {
+    bottom: -15px;
+    right: -15px;
+    transform: rotate(180deg);
+}
+
+#content .mb_personas > div {
+    padding: 0;
+}
+
+#content .mb_personas img {
+    max-width: initial;
+}
+
+#content .mb_personas a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    text-align: right;
+    background: #212121 url('../img/pattern-2.jpg') repeat center;
+}
+
+#content .mb_personas h3 {
+    font-size: 1.8rem;
+    line-height: 1.3;
+    color: white;
+}
+
+#content .mb_personas a .data {
+    position: absolute;
+    display: block;
+    width: 100%;
+    bottom: 0;
+    padding: .6rem;
+    opacity: 0;
+}
+
+#content .mb_personas a .data p {
+    margin-bottom: 0;
+    font-size: 1rem;
+    color: #74c7dd;
+}
+
+#content .mb_personas a:hover img {
+    opacity: .2;
+}
+
+#content .mb_personas a:hover .data {
+    opacity: 1
+}
+
+#content .mb_personas > div:nth-child(odd) a {
+    height: 800px;
+}
+
+#content .mb_personas > div:nth-child(odd) a img {
+    width: auto;
+    height: 100%;
+    margin-left: -85%;
+}
+
+#content .mb_personas > div:nth-child(3) a img {
+    margin-left: -110%;
+}
+
+#content .mb_personas > div:nth-child(even) a {
+    height: 400px;
+}
+
+#content .mb_personas > div:nth-child(even) .persona:first-child {
+    margin-top: -2rem;
+    margin-bottom: 4rem;
+}
+
+#content .mb_personas > div:nth-child(even) a img {
+    width: auto;
+    height: 105%;
+    margin-left: -25%
+}
+
+.borde-izq, .borde-der {
+    position: relative;
+}
+
+.borde-izq:before, .borde-der:before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    display: block;
+    z-index: 6;
+}
+
+.borde-izq:before {
+    border-top: 2px solid #74c7dd;
+    border-left: 2px solid #74c7dd;
+    border-bottom: 2px solid #74c7dd;
+}
+.borde-der:before {
+    right: 0;
+    border-top: 2px solid #74c7dd;
+    border-right: 2px solid #74c7dd;
+    border-bottom: 2px solid #74c7dd;
+}
+#content .mb_cierre {
+    padding-top: 1rem;
+    padding-bottom: 4rem;
+}
+
+#content .mb_personas .persona.mm img {
+    height: 136%;
+    margin-left: -45%;
+}
+#content .mb_personas .persona.sc img {
+    height: 136%;
+    margin-left: -45%;
+}
+#content .mb_personas .persona.bv img {
+    margin-left: -45%;
+}
+#content .mb_personas .persona.dg img {
+    margin-left: -57%;
+    height: 137%;
+    top:-3%;
+    position: relative
+}
+#content .mb_personas .persona.la img {
+    margin-left: -30%;
+    height: 120%;
+}
+#content .mb_personas .persona.ld img {
+    margin-left: -55%;
+    height: 120%;
+}
+#content .mb_personas .ld .data,
+#content .mb_personas .la .data {
+    top: 0;
+}
+#content .mb_personas .la .data h3{
+    font-size: 1.6rem
+}
+#content .mb_personas .la .data:nth-child(2) {
+    text-align: left
+}
+#content .mb_personas .la .data:last-child {
+    top: initial;
+}
+/*Interna*/
+#content.interna .img-perfil {
+    z-index: 2;
+    border: 2px solid #74c7dd;
+}
+#content.interna .img-perfil:before {
+    left: 0;
+    top: 0;
+}
+#content.interna .intro {
+    background: #73c6dd;
+    padding: 2rem 0;
+    position: relative;
+}
+#content.interna .intro:before,
+#content.interna .intro:after {
+    content:'';
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 500%;
+    background: #73c6dd;
+    top:0;
+}
+#content.interna .intro:before {
+    right: 100%;
+}
+#content.interna .intro:after {
+    left: 100%;
+}
+#content.interna .intro h2 {
+    font-size: 4.0625rem;
+    font-family: 'Noto Serif', serif;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 0
+}
+#content.interna .intro .cargo {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+
+}
+#content.interna .preguntas h3 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    font-style: italic;
+    margin: 2.5rem 0 2rem;
+    color: #73c6dd;
+}
+#content.interna .preguntas .siglas {
+    color: #73c6dd;
+    font-family: 'Noto Serif', serif;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-right: 0.2em;
+    line-height: 1.125rem;
+}
+#content.interna .preguntas p:last-child {
+    position: relative;
+}
+#content.interna .preguntas p {
+    padding-right: 7%;
+}
+#content.interna .preguntas p:last-child:after {
+    content:'';
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    display: block;
+    border-right: 1px solid #73c6dd;
+    border-bottom: 1px solid #73c6dd;
+    bottom: -1rem;;
+    right: 0;
+}
+#content.interna .mb_cierre {
+    padding-top: 3rem;
+    padding-bottom: 4rem;
 }
