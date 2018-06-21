@@ -110,9 +110,18 @@ html #content {
 #content .mb_destacadas {
     position: relative;
 }
+
 #content .mb_destacadas a {
     text-decoration: none;
+    position: relative;
+    transition: top 500ms;
+    top: 0;
 }
+
+#content .mb_destacadas a:hover {
+    top: -1rem;
+}
+
 #content .mb_destacadas:after, #content .mb_textos:after {
     content: "";
     display: block;
@@ -135,9 +144,11 @@ html #content {
 #content .mb_destacadas h3 {
     color: #74c7dd;
 }
+
 #content .mb_destacadas p {
     color: #fff;
 }
+
 #content .cargo {
     font-family: 'Noto Serif', serif;
     font-style: italic;
@@ -284,12 +295,18 @@ html #content {
     bottom: 0;
     padding: .6rem;
     opacity: 0;
+    transition: opacity 700ms;
 }
 
 #content .mb_personas a .data p {
     margin-bottom: 0;
     font-size: 1rem;
     color: #74c7dd;
+}
+
+#content .mb_personas a img {
+    opacity: 1;
+    transition: opacity 500ms;
 }
 
 #content .mb_personas a:hover img {
@@ -348,12 +365,14 @@ html #content {
     border-left: 2px solid #74c7dd;
     border-bottom: 2px solid #74c7dd;
 }
+
 .borde-der:before {
     right: 0;
     border-top: 2px solid #74c7dd;
     border-right: 2px solid #74c7dd;
     border-bottom: 2px solid #74c7dd;
 }
+
 #content .mb_cierre {
     padding-top: 1rem;
     padding-bottom: 4rem;
@@ -363,70 +382,84 @@ html #content {
     height: 136%;
     margin-left: -45%;
 }
+
 #content .mb_personas .persona.sc img {
     height: 136%;
     margin-left: -45%;
 }
+
 #content .mb_personas .persona.bv img {
     margin-left: -45%;
 }
+
 #content .mb_personas .persona.dg img {
     margin-left: -57%;
     height: 137%;
-    top:-3%;
+    top: -3%;
     position: relative
 }
+
 #content .mb_personas .persona.la img {
     margin-left: -30%;
     height: 120%;
 }
+
 #content .mb_personas .persona.ld img {
     margin-left: -55%;
     height: 120%;
 }
-#content .mb_personas .ld .data,
-#content .mb_personas .la .data {
+
+#content .mb_personas .ld .data, #content .mb_personas .la .data {
     top: 0;
 }
-#content .mb_personas .la .data h3{
+
+#content .mb_personas .la .data h3 {
     font-size: 1.6rem
 }
+
 #content .mb_personas .la .data:nth-child(2) {
     text-align: left
 }
+
 #content .mb_personas .la .data:last-child {
     top: initial;
 }
+
 /*Interna*/
 #content.interna .img-perfil {
     z-index: 2;
     border: 2px solid #74c7dd;
 }
+
 #content.interna .img-perfil:before {
     left: 0;
     top: 0;
 }
+
 #content.interna .intro {
     background: #73c6dd;
     padding: 2rem 0;
     position: relative;
 }
-#content.interna .intro:before,
-#content.interna .intro:after {
-    content:'';
+
+#content.interna .intro:before, #content.interna .intro:after {
+    content: '';
     display: block;
     position: absolute;
     height: 100%;
     width: 500%;
     background: #73c6dd;
-    top:0;
+    top: 0;
 }
+
 #content.interna .intro:before {
     right: 100%;
 }
+
 #content.interna .intro:after {
     left: 100%;
 }
+
 #content.interna .intro h2 {
     font-size: 4.0625rem;
     font-family: 'Noto Serif', serif;
@@ -434,11 +467,12 @@ html #content {
     line-height: 1;
     margin-bottom: 0
 }
+
 #content.interna .intro .cargo {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-
 }
+
 #content.interna .preguntas h3 {
     font-size: 2.4rem;
     font-weight: bold;
@@ -446,6 +480,7 @@ html #content {
     margin: 2.5rem 0 2rem;
     color: #73c6dd;
 }
+
 #content.interna .preguntas .siglas {
     color: #73c6dd;
     font-family: 'Noto Serif', serif;
@@ -454,24 +489,147 @@ html #content {
     margin-right: 0.2em;
     line-height: 1.125rem;
 }
+
 #content.interna .preguntas p:last-child {
     position: relative;
 }
+
 #content.interna .preguntas p {
     padding-right: 7%;
 }
+
 #content.interna .preguntas p:last-child:after {
-    content:'';
+    content: '';
     width: 100px;
     height: 100px;
     position: absolute;
     display: block;
     border-right: 1px solid #73c6dd;
     border-bottom: 1px solid #73c6dd;
-    bottom: -1rem;;
+    bottom: -1rem;
     right: 0;
 }
+
 #content.interna .mb_cierre {
     padding-top: 3rem;
     padding-bottom: 4rem;
+}
+
+#volver-home {
+    right: -15px;
+    position: fixed;
+    top: 50%;
+    transition: right 300ms;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.59);
+    border-radius: 10px;
+}
+
+#volver-home:hover {
+    right: -10px
+}
+
+@media (max-width: 1200px) {
+    #content .mb_personas > div:nth-child(odd) a {
+        height: 600px;
+    }
+
+    #content .mb_personas > div:nth-child(even) a {
+        height: 300px;
+    }
+
+    #content .mb_personas > div:nth-child(odd) a img {
+        margin-left: -5%;
+    }
+
+    #content .mb_personas > div:nth-child(even) a img {
+        height: 125%;
+        margin-left: 0
+    }
+
+    #content .mb_personas .persona.mm img {
+        height: 160%;
+        margin-left: -5%;
+    }
+
+    #content .mb_personas .persona.sc img {
+        height: 160%;
+        margin-left: -5%;
+    }
+
+    #content .mb_personas > div:first-child {
+        margin-bottom: 6rem;
+    }
+
+    #content .mb_personas .persona.dg img {
+        height: 160%;
+        margin-left: -5%;
+    }
+
+    #content .mb_personas .persona.la img {
+        height: 170%;
+        margin-left: -25%;
+        margin-top: -5%;
+    }
+
+    #content .mb_personas .persona.ld img {
+        height: 141%;
+        margin-left: -5%;
+    }
+}
+
+@media (max-width: 992px) {
+    #content header .row > .col-lg-4 {
+        text-align: right;
+        border-right: none!important;
+        margin-bottom: -28%;
+    }
+
+    #content header .row h1 {
+        text-shadow: 0 0 35px rgba(0, 0, 0, 0.9),0 0 15px rgba(0, 0, 0, 0.9);
+    }
+
+    html #content {
+        padding-top: 58px;
+    }
+
+    #content .mb_chapeau em {
+        font-size: 1.3rem;
+    }
+
+    #content .mb_chapeau p {
+        padding: 2rem 0;
+        margin-bottom: 0;
+    }
+
+    #content .mb_textos h3 {
+        font-size: 1.8rem;
+        padding: 4rem 3.6rem 0 0;
+    }
+
+    #content .mb_textos p {
+        padding: 0 0 0 3.6rem ;
+        font-size: 1.4rem;
+    }
+
+    #content .mb_destacadas > div:first-child .persona_data {
+        padding: 2rem 2rem 0 0;
+    }
+
+    #content .mb_destacadas > div:last-child .persona_data {
+        padding: 2rem 0 0 2rem;
+    }
+
+    #content .mb_textos, #content .mb_chapeau {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    /*Personas*/
+    #content .mb_personas .persona.mm {
+    }
+
+    #content .mb_personas .persona.mm, #content .mb_personas .persona.bv {
+        margin-bottom: 2rem!important;
+        margin-top: -4rem!important;
+    }
 }
