@@ -1,0 +1,164 @@
+@charset "UTF-8"; /*
+============
+Generales
+============
+1REM = 16PX
+*/
+html #content {
+    background: #212121 url('../img/pattern.png') repeat;
+    color: #ffffff;
+    font-size: 1.125rem;
+    line-height: 1.555555;
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 44px;
+    overflow: hidden;
+}
+
+#content + footer {
+    margin-top: 0;
+}
+
+#content img {
+    max-width: 100%;
+}
+
+#content h1 {
+    font-family: 'Noto Serif', serif;
+    font-size: 4rem;
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+#content h3 {
+    font-family: 'Noto Serif', serif;
+    font-size: 2.75rem;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.txt_azul {
+    color: #74c7dd;
+}
+
+/*Header*/
+#content header {
+    border-top: 32px solid #74c7dd;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+#content header p:nth-child(2) {
+    font-size: 1.1666666rem;
+    font-family: 'Noto Serif', serif;
+}
+
+#content header p:nth-child(3) em {
+    font-size: 1.944444444rem;
+    font-family: 'Noto Serif', serif;
+    color: #74c7dd;
+    font-weight: 700;
+    font-style: italic
+}
+
+#content header .row > div:first-child {
+    border-right: 1px solid #74c7dd;
+}
+
+#content header .row > div:nth-child(2) img {
+    width: 470px;
+    margin-top: 1.5rem;
+}
+
+#content header .row > div:nth-child(2) {
+    padding: 0 5%;
+}
+
+/*Video*/
+#content .mb_video .col:before {
+    content: "";
+    background: #74c7dd;
+    position: absolute;
+    width: 1000%;
+    height: 50%;
+    top: 0;
+    left: -500%;
+}
+
+#content .mb_video .col > div {
+    border: 1px solid #74c7dd;
+    margin-top: 1rem;
+    box-shadow: 0 8px 0 0 rgb(0,0,0, .6);
+}
+
+/*Chapeau*/
+#content .mb_chapeau {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+#content .mb_chapeau p {
+    padding: 3rem 0;
+}
+
+#content .mb_chapeau em {
+    font-family: 'Noto Serif', serif;
+    font-size: 1.5rem;
+}
+
+/*Destacadas*/
+#content .mb_destacadas {
+    position: relative;
+}
+
+#content .mb_destacadas:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 2px;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    background-color: #74c7dd;
+}
+
+#content .mb_destacadas > div {
+    padding: 0;
+}
+
+#content .mb_destacadas > div .persona_data {
+    padding: 2rem;
+}
+
+#content .mb_destacadas h3 {
+    color: #74c7dd;
+}
+
+#content .cargo {
+    font-family: 'Noto Serif', serif;
+    font-style: italic;
+    font-size: 1.125rem;
+}
+
+#content .img-perfil {
+    position: relative;
+}
+
+#content .img-perfil:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background: url('../img/graf-triangulo-a.png') no-repeat;
+    background-size: contain;
+    height: 90px;
+    width: 90px;
+}
+#content .mb_destacadas > div:first-child .img-perfil:before {
+    left: -10px;
+    top: -10px;
+}
+#content .mb_destacadas > div:last-child .img-perfil:before {
+    right: -10px;
+    bottom: -10px;
+    transform: rotate(180deg);
+}
