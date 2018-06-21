@@ -321,29 +321,18 @@ html #content {
     height: 800px;
 }
 
+/*Solo grandes*/
 #content .mb_personas > div:nth-child(odd) a img {
     width: auto;
     height: 100%;
-    margin-left: -85%;
-}
-
-#content .mb_personas > div:nth-child(3) a img {
-    margin-left: -110%;
 }
 
 #content .mb_personas > div:nth-child(even) a {
     height: 400px;
 }
 
-#content .mb_personas > div:nth-child(even) .persona:first-child {
-    margin-top: -2rem;
-    margin-bottom: 4rem;
-}
-
 #content .mb_personas > div:nth-child(even) a img {
     width: auto;
-    height: 105%;
-    margin-left: -25%
 }
 
 .borde-izq, .borde-der {
@@ -376,37 +365,6 @@ html #content {
 #content .mb_cierre {
     padding-top: 1rem;
     padding-bottom: 4rem;
-}
-
-#content .mb_personas .persona.mm img {
-    height: 136%;
-    margin-left: -45%;
-}
-
-#content .mb_personas .persona.sc img {
-    height: 136%;
-    margin-left: -45%;
-}
-
-#content .mb_personas .persona.bv img {
-    margin-left: -45%;
-}
-
-#content .mb_personas .persona.dg img {
-    margin-left: -57%;
-    height: 137%;
-    top: -3%;
-    position: relative
-}
-
-#content .mb_personas .persona.la img {
-    margin-left: -30%;
-    height: 120%;
-}
-
-#content .mb_personas .persona.ld img {
-    margin-left: -55%;
-    height: 120%;
 }
 
 #content .mb_personas .ld .data, #content .mb_personas .la .data {
@@ -528,15 +486,59 @@ html #content {
     right: -10px
 }
 
+/*Solo grandes*/
+@media (min-width: 1200px) {
+    #content .mb_personas > div:nth-child(odd) a img {
+        margin-left: -85%;
+    }
+
+    #content .mb_personas > div:nth-child(3) a img {
+        margin-left: -110%;
+    }
+
+    #content .mb_personas > div:nth-child(even) .persona:first-child {
+        margin-top: -2rem;
+        margin-bottom: 4rem;
+    }
+
+    #content .mb_personas > div:nth-child(even) a img {
+        height: 105%;
+        margin-left: -25%
+    }
+
+    #content .mb_personas .persona.mm img {
+        height: 136%;
+        margin-left: -45%;
+    }
+
+    #content .mb_personas .persona.sc img {
+        height: 136%;
+        margin-left: -45%;
+    }
+
+    #content .mb_personas .persona.bv img {
+        margin-left: -45%;
+    }
+
+    #content .mb_personas .persona.dg img {
+        margin-left: -57%;
+        height: 137%;
+        top: -3%;
+        position: relative
+    }
+
+    #content .mb_personas .persona.la img {
+        margin-left: -30%;
+        height: 120%;
+    }
+
+    #content .mb_personas .persona.ld img {
+        margin-left: -55%;
+        height: 120%;
+    }
+}
+
 @media (max-width: 1200px) {
-    #content .mb_personas > div:nth-child(odd) a {
-        height: 600px;
-    }
-
-    #content .mb_personas > div:nth-child(even) a {
-        height: 300px;
-    }
-
     #content .mb_personas > div:nth-child(odd) a img {
         margin-left: -5%;
     }
@@ -556,10 +558,6 @@ html #content {
         margin-left: -5%;
     }
 
-    #content .mb_personas > div:first-child {
-        margin-bottom: 6rem;
-    }
-
     #content .mb_personas .persona.dg img {
         height: 160%;
         margin-left: -5%;
@@ -568,12 +566,34 @@ html #content {
     #content .mb_personas .persona.la img {
         height: 170%;
         margin-left: -25%;
-        margin-top: -5%;
     }
 
     #content .mb_personas .persona.ld img {
         height: 141%;
         margin-left: -5%;
+    }
+
+    #content .mb_personas > div:nth-child(odd) a {
+        height: 600px;
+    }
+
+    #content .mb_personas > div:nth-child(even) a {
+        height: 300px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    #content .mb_personas > div:nth-child(even) .persona:first-child {
+        margin-top: -2rem;
+        margin-bottom: 4rem;
+    }
+
+    #content .mb_personas .persona.la img {
+        margin-top: -5%;
+    }
+
+    #content .mb_personas > div:first-child {
+        margin-bottom: 6rem;
     }
 }
 
@@ -625,11 +645,4 @@ html #content {
     }
 
     /*Personas*/
-    #content .mb_personas .persona.mm {
-    }
-
-    #content .mb_personas .persona.mm, #content .mb_personas .persona.bv {
-        margin-bottom: 2rem!important;
-        margin-top: -4rem!important;
-    }
 }
