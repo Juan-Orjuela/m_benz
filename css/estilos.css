@@ -580,6 +580,24 @@ html #content {
     #content .mb_personas > div:nth-child(even) a {
         height: 300px;
     }
+
+    /*Interna*/
+    #content.interna .intro h2 {
+        font-size: 3rem;
+    }
+
+    #content.interna .intro .cargo {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    #content.interna .preguntas h3 {
+        font-size: 2rem;
+    }
+
+    #content.interna .preguntas .siglas {
+        font-size: 1.6rem;
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
@@ -645,4 +663,176 @@ html #content {
     }
 
     /*Personas*/
+    #content .mb_personas > div:nth-child(even) img {
+        margin: initial!important;
+        width: 100%!important;
+        height: auto!important;
+    }
+
+    #content .mb_personas .persona {
+        margin-bottom: 2rem;
+    }
+
+    #content .mb_personas .persona.mm {
+        margin-top: -4rem;
+    }
+
+    #content .mb_personas .persona.bv {
+        margin-top: -2rem;
+    }
+
+    #content .mb_personas > div:nth-child(3):before, #content .mb_personas > div:nth-child(5):before {
+        display: none;
+    }
+
+    #content .mb_personas > div:last-child:before {
+        display: block;
+        height: 130%;
+        top: -30%;
+    }
+}
+
+@media (max-width: 768px) {
+    #content h3 {
+        font-size: 2rem;
+    }
+
+    #content .cargo {
+        font-size: 1rem;
+    }
+
+    html #content {
+        font-size: 1rem;
+    }
+
+    #content .mb_destacadas:after, #content .mb_textos:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 2px;
+        height: 7rem;
+        top: 100%;
+        left: 50%;
+        margin-top: -2px;
+        background-color: #74c7dd;
+    }
+
+    #content .mb_textos:before {
+        top: 4rem;
+        margin-top: 0;
+    }
+
+    #content .mb_textos h3 {
+        font-size: 2.3rem;
+        padding: 4rem 5rem 1rem;
+        text-align: center;
+    }
+
+    #content .mb_textos p {
+        padding: 0;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    #content .mb_personas > div:nth-child(odd) a {
+        height: 600px;
+    }
+
+    #content .mb_personas > div:nth-child(even) a {
+        height: 600px;
+    }
+
+    #content .mb_personas > div:nth-child(odd) img {
+        margin: initial!important;
+        width: 100%!important;
+        height: auto!important;
+    }
+
+    #content .mb_personas .persona {
+        margin-bottom: 2rem;
+    }
+
+    #content .mb_personas .persona.mm {
+        margin-top: 0;
+    }
+
+    #content .mb_personas .persona.bv {
+        margin-top: 0;
+    }
+
+    #content .mb_destacadas:after, #content .mb_textos:after, #content .mb_personas> div:before, #content .mb_personas > div:last-child:before {
+        display: none;
+    }
+
+    #content .mb_personas {
+        padding-top: 7rem;
+        padding-bottom: 2rem;
+    }
+
+    #content .mb_personas {
+        position: relative;
+    }
+
+    #content .persona.la .borde-der:before {
+        display: none;
+    }
+
+    #content .mb_personas:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 2px;
+        height: 100%;
+        top: 0;
+        background: #74c7dd;
+        z-index: ;
+        left: 50%;
+    }
+
+    #content .mb_destacadas > div .persona_data {
+        padding: 1.5rem!important;
+    }
+
+    #content .mb_textos h3 {
+        font-size: 2.3rem;
+        padding: 4rem 1.5rem 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    #content h1 {
+        font-size: 3.2rem;
+        line-height: 1.1;
+    }
+
+    #content header p:nth-child(3) em {
+        font-size: 1.4rem;
+    }
+
+    #content .mb_personas > div:nth-child(odd) a {
+        height: initial;
+    }
+
+    #content .mb_personas > div:nth-child(even) a {
+        height: initial;
+    }
+
+    #content .mb_textos p {
+        padding: 0 1.5rem;
+    }
+
+    #content .mb_textos h3 {
+        padding-top: 5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #content h1 {
+        font-size: 2.5rem;
+        line-height: 1.3;
+    }
+
+    #content .mb_textos h3 {
+        font-size: 2rem
+    }
 }
