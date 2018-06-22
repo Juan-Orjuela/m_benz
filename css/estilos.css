@@ -486,12 +486,15 @@ html #content {
 #volver-home:hover {
     right: -10px
 }
+
 #content.interna-2 .preguntas {
     padding-top: 2rem;
 }
-#content.interna-2 .intro h2{
+
+#content.interna-2 .intro h2 {
     font-size: 3rem;
 }
+
 /*Solo grandes*/
 @media (min-width: 1200px) {
     #content .mb_personas > div:nth-child(odd) a img {
@@ -604,6 +607,17 @@ html #content {
     #content.interna .preguntas .siglas {
         font-size: 1.6rem;
     }
+
+    /*Mostrar nombres
+    #content .mb_personas h3 {
+        font-size: 1.6rem;
+    }
+    #content .mb_personas a .data {
+        opacity: 1
+    }
+    #content .mb_personas  {
+        text-shadow: 0 0 25px rgba(0,0,0,.7), 1px 1px 2px rgba(0,0,0,.8) ;
+    }*/
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
@@ -803,9 +817,10 @@ html #content {
         font-size: 2.3rem;
         padding: 4rem 1.5rem 2rem;
     }
-    #content.interna-2 .intro h2{
-    font-size: 2.4rem;
-}
+
+    #content.interna-2 .intro h2 {
+        font-size: 2.4rem;
+    }
 }
 
 @media (max-width: 576px) {
