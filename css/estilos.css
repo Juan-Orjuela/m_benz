@@ -480,12 +480,18 @@ html #content {
     transition: right 300ms;
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.59);
     border-radius: 10px;
+    z-index: 9999;
 }
 
 #volver-home:hover {
     right: -10px
 }
-
+#content.interna-2 .preguntas {
+    padding-top: 2rem;
+}
+#content.interna-2 .intro h2{
+    font-size: 3rem;
+}
 /*Solo grandes*/
 @media (min-width: 1200px) {
     #content .mb_personas > div:nth-child(odd) a img {
@@ -797,6 +803,9 @@ html #content {
         font-size: 2.3rem;
         padding: 4rem 1.5rem 2rem;
     }
+    #content.interna-2 .intro h2{
+    font-size: 2.4rem;
+}
 }
 
 @media (max-width: 576px) {
